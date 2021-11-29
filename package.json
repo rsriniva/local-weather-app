@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --port 5000",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "style": "import-sort -l \"**/{src,tests,e2e}/**/*.ts\" && prettier --check \"**/{src,tests,e2e}/**/*.{*css,ts}\"",
@@ -28,7 +29,10 @@
     "docker:taillogs": "echo Web Server Logs: && cross-conf-env docker logs -f $npm_package_config_imageName",
     "docker:open": "sleep 2 && cross-conf-env open-cli http://localhost:$npm_package_config_imagePort",
     "docker:debugmessage": "echo Docker Debug Completed Successfully! Hit Ctrl+C to terminate log tailing.",
-    "docker:debug": "run-s -cs docker:build docker:run docker:open docker:debugmessage docker:taillogs"
+    "docker:debug": "run-s -cs docker:build docker:run docker:open docker:debugmessage docker:taillogs",
+    "e2e": "ng e2e",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "private": true,
   "dependencies": {
@@ -48,10 +52,12 @@
     "@angular-devkit/build-angular": "~13.0.3",
     "@angular/cli": "~13.0.3",
     "@angular/compiler-cli": "~13.0.0",
+    "@cypress/schematic": "^1.6.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-unit-test-helper": "^12.0.0",
     "cross-conf-env": "^1.2.1",
-    "dev-norms": "1.7.1",
+    "dev-norms": "^1.6.0",
     "import-sort": "^6.0.0",
     "import-sort-cli": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
@@ -72,7 +78,8 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-etc": "^1.13.10",
     "tslint-plugin-prettier": "^2.3.0",
-    "typescript": "~4.4.3"
+    "typescript": "~4.4.3",
+    "cypress": "latest"
   },
   "importSort": {
     ".ts, .tsx": {
