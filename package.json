@@ -33,7 +33,9 @@
     "docker:debug": "run-s -cs docker:build docker:run docker:open docker:debugmessage docker:taillogs",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "prenow:publish": "npm run build:prod",
+    "now:publish": "now --platform-version 2 dist/local-weather-app"
   },
   "private": true,
   "dependencies": {
