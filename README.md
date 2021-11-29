@@ -1,3 +1,6 @@
+# CircleCI Latest Status
+[![CircleCI](https://circleci.com/gh/rsriniva/local-weather-app/tree/main.svg?style=shield)](https://circleci.com/gh/rsriniva/local-weather-app/tree/main)
+
 # LocalWeatherApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
