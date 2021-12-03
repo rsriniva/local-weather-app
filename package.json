@@ -40,10 +40,13 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.0.0",
+    "@angular/cdk": "^13.0.3",
     "@angular/common": "~13.0.0",
     "@angular/compiler": "~13.0.0",
     "@angular/core": "~13.0.0",
+    "@angular/flex-layout": "^13.0.0-beta.36",
     "@angular/forms": "~13.0.0",
+    "@angular/material": "^13.0.3",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
@@ -60,6 +63,7 @@
     "@types/node": "^12.11.1",
     "angular-unit-test-helper": "^12.0.0",
     "cross-conf-env": "^1.2.1",
+    "cypress": "latest",
     "dev-norms": "^1.6.0",
     "import-sort": "^6.0.0",
     "import-sort-cli": "^6.0.0",
@@ -81,8 +85,7 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-etc": "^1.13.10",
     "tslint-plugin-prettier": "^2.3.0",
-    "typescript": "~4.4.3",
-    "cypress": "latest"
+    "typescript": "~4.4.3"
   },
   "importSort": {
     ".ts, .tsx": {

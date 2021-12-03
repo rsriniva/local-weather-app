@@ -1,6 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { TestBed } from '@angular/core/testing'
 
+import { MaterialModule } from '../material.module'
 import { WeatherService } from './weather.service'
 
 describe('WeatherService', () => {
@@ -8,7 +9,7 @@ describe('WeatherService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, MaterialModule],
     })
     service = TestBed.inject(WeatherService)
   })
